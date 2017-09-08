@@ -4,6 +4,7 @@ import React, { Component, Element } from 'react';
 import Count from 'countup.js';
 
 type Props = {
+  children: ReactNode,
   className: string,
   decimal: string,
   decimals: number,
@@ -103,6 +104,7 @@ export const startAnimation = (component: Component<*, *, *>) => {
 
 export default class CountUp extends Component {
   static defaultProps = {
+    children: null,
     className: undefined,
     decimal: '.',
     decimals: 0,
@@ -149,6 +151,7 @@ export default class CountUp extends Component {
 
   render() {
     const {
+      children,
       className,
       start,
       style,
@@ -170,6 +173,7 @@ export default class CountUp extends Component {
           prefix,
           suffix,
         })}
+        {children}
       </span>
     );
   }

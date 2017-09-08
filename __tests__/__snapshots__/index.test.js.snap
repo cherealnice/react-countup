@@ -17,3 +17,13 @@ exports[`renders correctly with wrong onStart type 1`] = `
   0
 </span>
 `;
+
+exports[`renders with children correctly 1`] = `
+<span
+  className={undefined}
+  style={undefined}
+>
+  0
+  HELLO
+</span>
+`;
